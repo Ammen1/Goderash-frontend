@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import Tyre1 from "./Tyre1";
 import Tyre2 from "./Tyre2";
 import Carwash8 from "./Carwash8";
+import NavBar from "@/components/NavBar";
 
 const Tyre = () => {
   const history = useNavigate();
@@ -51,6 +52,7 @@ const Tyre = () => {
           />
         </div>
         <div className="relative  flex flex-col items-center justify-between px-10">
+          <NavBar />
           {/*main*/}
           <main className="flex mt-32 flex-col items-center text-center mb-10 pt-4">
             <h2 className="text-6xl font-bold text-white mb-4">

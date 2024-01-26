@@ -8,6 +8,7 @@ import Fuel3 from "./Fuel3";
 import Footer from "@/components/Footer";
 import { useNavigate, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import NavBar from "@/components/NavBar";
 
 export default function Fuel() {
   const history = useNavigate();
@@ -51,6 +52,7 @@ export default function Fuel() {
           />
         </div>
         <div className="relative flex flex-col items-center justify-between px-10">
+          <NavBar />
           <main className="flex mt-8 md:mt-32 flex-col items-center text-center mb-10 pt-4">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Save time, every time you refuel

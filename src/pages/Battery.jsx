@@ -5,6 +5,7 @@ import b from "../assets/b.png";
 import styles from "../style";
 import { show, rote } from "../assets";
 import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 import Battery1 from "./Battery1";
 import Battery2 from "./Battery2";
 import Battery3 from "./Battery3";
@@ -54,6 +55,7 @@ const Battery = () => {
         </div>
         <div className="relative  flex flex-col items-center justify-between px-10">
           {/*main*/}
+          <NavBar />
           <main className="flex mt-32 flex-col items-center text-center mb-10 pt-4">
             <h2 className="text-6xl font-bold text-white mb-4">
               Save time, every time you refuel
