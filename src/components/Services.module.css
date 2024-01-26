@@ -1,0 +1,44 @@
+/* Default styles for non-hover state */
+.serviceContainer .image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover styles for larger screens */
+@media (min-width: 768px) {
+  .serviceContainer:hover .image::after {
+    opacity: 1; /* Show on hover for larger screens */
+  }
+}
+
+/* Additional media queries for smaller screens if needed */
+@media (max-width: 767px) {
+  /* Add styles for smaller screens if needed */
+  .serviceContainer .image::after {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    /* Add any other styles for smaller screens */
+  }
+
+  .serviceContainer:hover .image::after {
+    opacity: 1; /* Always show on hover for smaller screens */
+  }
+}
+
+.serviceWrapper {
+  transition: transform 0.5s ease-in-out;
+}
