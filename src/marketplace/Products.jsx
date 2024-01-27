@@ -2,7 +2,7 @@
 import React from "react";
 import { services } from "../constants";
 import styles from "../style";
-import Services from "./Services";
+import HomeM from "./HomeM";
 
 const Products = () => {
   const itemsPerPage = 3;
@@ -24,7 +24,7 @@ const Products = () => {
               index % itemsPerPage === 0 ? "clear-both" : ""
             }`}
           >
-            <Services {...card} />
+            <HomeM {...card} />
           </div>
         ))}
       </div>

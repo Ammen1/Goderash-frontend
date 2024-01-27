@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate, Link } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import b from "../assets/b.png";
 import styles from "../style";
-import { show, rote } from "../assets";
+import { rote } from "../assets";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import Battery1 from "./Battery1";
@@ -32,7 +33,7 @@ const Battery = () => {
     console.log("Image URL:", services.image);
 
     fetchServices();
-  }, []);
+  }, [services.image]);
 
   const handleOrderClick = (serviceSlug) => {
     history(`/order/${serviceSlug}`);

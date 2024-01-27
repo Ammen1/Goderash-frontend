@@ -1,5 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 
+// eslint-disable-next-line react/prop-types
 const Services = ({ name, title, img }) => {
   return (
     <div className="relative flex items-center justify-center h-auto hover:shadow-2xl">
