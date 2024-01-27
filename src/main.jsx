@@ -25,13 +25,14 @@ import OrderPage from "./pages/OrderDetails.jsx";
 import AddCar from "./pages/AddCar.jsx";
 import Payment from "./pages/Payment.jsx";
 import Calendar from "./admin/Calendar.jsx";
-
+import HomeM from "./marketplace/HomeM.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
     <AuthProvider>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/admin" element={<Home />} />
+        <Route path="/home" element={<HomeM />} />
         <Route path="/homepage" element={<Homepage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />

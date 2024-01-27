@@ -28,7 +28,7 @@ const EngineOil = () => {
             width="581"
           />
         </div>
-        <div className="relative  flex flex-col items-center justify-between px-10">
+        <div className="relative flex flex-col items-center justify-between px-10">
           <NavBar />
           {/*main*/}
           <main className="flex mt-32 flex-col items-center text-center mb-10 pt-4">

@@ -84,7 +84,7 @@ const NavBar = () => {
   const shouldHideNav = scrollingDown && prevScrollY > 80;
   return (
     <header
-      className={`w-screen fixed flex bg-[#143464]   justify-between items-center transition-all  ${
+      className={`w-screen fixed flex bg-[#143464] justify-between items-center transition-all  ${
         shouldHideNav ? "-translate-y-16" : "translate-y-0"
       }`}
     >
@@ -126,10 +126,10 @@ const NavBar = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute bg-[#143464]  mt-3 h-60  rounded-3xl shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -translate-x-96 w-screen bg-[#143464] flex-grow  mt-3 h-60  rounded-3xl shadow-lg ring-1 ring-gray-900/5">
                 <div className="p-2 flex">
                   {/* First Column */}
-                  <div className="flex flex-auto   ">
+                  <div className="flex">
                     {products.map((item) => (
                       <div
                         key={item.name}
@@ -168,18 +168,24 @@ const NavBar = () => {
           >
             Order Now
           </a>
+          <a
+            href="/home"
+            className="text-sm font-semibold leading-6 text-white "
+          >
+            Marketplace
+          </a>
           <a href="#" className="text-sm font-semibold leading-6 text-white ">
             Company
           </a>
         </Popover.Group>
-        <div className="hidden lg:ml-10 lg:flex -translate-x-14  lg:flex-1 lg:justify-end">
+        {/* <div className="hidden lg:ml-10 lg:flex -translate-x-14  lg:flex-1 lg:justify-end">
           <a
             href="/login"
             className="text-sm font-semibold leading-6 text-white"
           >
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
-        </div>
+        </div> */}
         <div className="flex items-center space-x-4">
           <Button className=" bg-white border-dotted shadow-2xl hover:shadow-white hover:bg-white flex items-center px-4 py-2  rounded-md">
             <span className="mr-2 text-black font-semibold">Download Now</span>
