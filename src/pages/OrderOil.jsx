@@ -28,7 +28,7 @@ const OrderOil = () => {
     const fetchCarTypes = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+          "http://gooderash.com/api/base/admin/listvehicleinformation/"
         );
         setCarTypes(response.data);
       } catch (error) {
@@ -43,7 +43,7 @@ const OrderOil = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listcategory/"
+          "http://gooderash.com/api/base/admin/listcategory/"
         );
         setCategories(response.data);
       } catch (error) {
@@ -59,7 +59,7 @@ const OrderOil = () => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/base/user/createengineoil/",
+        "http://gooderash.com/api/base/user/createengineoil/",
         formData
       );
       console.log("Tyre order placed successfully!");

@@ -29,7 +29,7 @@ const TyreOrder = () => {
     const fetchBrand = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/tyre/user/tyre/listtyrebrand/"
+          "http://gooderash.com/api/tyre/user/tyre/listtyrebrand/"
         );
         settyreBrands(response.data);
       } catch (error) {
@@ -42,7 +42,7 @@ const TyreOrder = () => {
     const fetchCarTypes = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/base/admin/listvehicleinformation/"
+          "http://gooderash.com/api/base/admin/listvehicleinformation/"
         );
         setCarTypes(response.data);
       } catch (error) {
@@ -57,7 +57,7 @@ const TyreOrder = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/api/tyre/user/tyre/listtyrecategory/"
+          "http://gooderash.com/api/tyre/user/tyre/listtyrecategory/"
         );
         setCategories(response.data);
       } catch (error) {
@@ -73,7 +73,7 @@ const TyreOrder = () => {
 
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/tyre/user/tyre/create/",
+        "http://gooderash.com/api/tyre/user/tyre/create/",
         formData
       );
       console.log("Tyre order placed successfully!");

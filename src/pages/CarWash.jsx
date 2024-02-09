@@ -24,7 +24,7 @@ const CarWash = () => {
     const fetchServices = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/tyre/user/tyre/listtyrecategory/"
+          "http://gooderash.com/api/tyre/user/tyre/listtyrecategory/"
         );
         const data = await response.json();
         setServices(data);

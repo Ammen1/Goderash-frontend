@@ -10,7 +10,7 @@ const HomePage = () => {
   }, []);
 
   let getNotes = async () => {
-    let response = await fetch("http://127.0.0.1:8000/api/base/listservices", {
+    let response = await fetch("http://gooderash.com/api/base/listservices", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

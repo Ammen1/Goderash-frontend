@@ -15,7 +15,7 @@ function Orderpage() {
     const fetchServices = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/base/admin/listcategory/"
+          "http://gooderash.com/api/base/admin/listcategory/"
         );
         const data = await response.json();
         setServices(data);
