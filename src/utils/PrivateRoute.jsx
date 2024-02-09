@@ -10,7 +10,7 @@ const PrivateRoute = ({ element: Element, ...rest }) => {
   return (
     <Route
       {...rest}
-      element={user ? <Element /> : <Navigate to="/login" replace />}
+      element={user ? <Element /> : <Navigate to="/" replace />}
     />
   );
 };

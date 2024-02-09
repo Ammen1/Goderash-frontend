@@ -6,7 +6,7 @@ import "./index.css";
 import Home from "./admin/Home.jsx";
 import Homepage from "./components/Homepage.jsx";
 // import Footer from "./components/Footer.jsx";
-import { AuthProvider } from "./context/AuthContext.jsx";
+// import { AuthProvider } from "./context/AuthContext.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import Register from "./pages/Register.jsx";
 import Fuel from "./pages/Fuel.jsx";
@@ -28,31 +28,31 @@ import Calendar from "./admin/Calendar.jsx";
 import HomeM from "./marketplace/HomeM.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
-    <AuthProvider>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/admin" element={<Home />} />
-        <Route path="/home" element={<HomeM />} />
-        <Route path="/homepage" element={<Homepage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/fuel" element={<Fuel />} />
-        <Route path="/tyre" element={<Tyre />} />
-        <Route path="/carwash" element={<CarWash />} />
-        <Route path="/battery" element={<Battery />} />
-        <Route path="/engineoil" element={<EngineOil />} />
-        <Route path="/emergance" element={<Emergance />} />
-        <Route path="/orderpage" element={<Orderpage />} />
-        <Route path="/order-fuel" element={<FuelOrderPage />} />
-        <Route path="/order-battery" element={<OrderBattery />} />
-        <Route path="/order-tyre" element={<TyreOrder />} />
-        <Route path="/order-carwash" element={<OrderCarWash />} />
-        <Route path="/order-engineoil" element={<OrderOil />} />
-        <Route path="/orderdetails" element={<OrderPage />} />
-        <Route path="/addcar" element={<AddCar />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/calender" element={<Calendar />} />
-      </Routes>
-    </AuthProvider>
+    {/* <AuthProvider> */}
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/admin" element={<Home />} />
+      <Route path="/home" element={<HomeM />} />
+      <Route path="/homepage" element={<Homepage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/fuel" element={<Fuel />} />
+      <Route path="/tyre" element={<Tyre />} />
+      <Route path="/carwash" element={<CarWash />} />
+      <Route path="/battery" element={<Battery />} />
+      <Route path="/engineoil" element={<EngineOil />} />
+      <Route path="/emergance" element={<Emergance />} />
+      <Route path="/orderpage" element={<Orderpage />} />
+      <Route path="/order-fuel" element={<FuelOrderPage />} />
+      <Route path="/order-battery" element={<OrderBattery />} />
+      <Route path="/order-tyre" element={<TyreOrder />} />
+      <Route path="/order-carwash" element={<OrderCarWash />} />
+      <Route path="/order-engineoil" element={<OrderOil />} />
+      <Route path="/orderdetails" element={<OrderPage />} />
+      <Route path="/addcar" element={<AddCar />} />
+      <Route path="/payment" element={<Payment />} />
+      <Route path="/calender" element={<Calendar />} />
+    </Routes>
+    {/* </AuthProvider> */}
   </Router>
 );

@@ -7,16 +7,34 @@ import b from "../assets/b.png";
 import styles from "../style";
 import { rote } from "../assets";
 import NavBar from "@/components/NavBar";
+import axios from "axios"; // Added the import for axios
 
 const HomeM = () => {
   const history = useNavigate();
   const [services, setServices] = useState([]);
+  const [, setMediaData] = useState([]);
+  const productId = 1; // Replace with the actual product inventory ID
+
+  useEffect(() => {
+    const fetchMediaData = async () => {
+      try {
+        const response = await axios.get(
+          `/api/product-inventory/${productId}/media/`
+        );
+        setMediaData(response.data.media);
+      } catch (error) {
+        console.error("Error fetching media data:", error);
+      }
+    };
+
+    fetchMediaData();
+  }, [productId]);
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/tyre/user/tyre/listtyrecategory/"
+          "http://127.0.0.1:8000/api/products/inventory/category/all/"
         );
         const data = await response.json();
         setServices(data);
@@ -92,15 +110,15 @@ const HomeM = () => {
               <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
               <div className="flex justify-between w-full">
                 <span className="text-lg font-bold text-black text-center">
-                  Price: {service.price}
+                  Price: {service.brand}
                 </span>
               </div>
-              <p className="text-gray-600 mb-4">
+              {/* <p className="text-gray-600 mb-4">
                 {service.description.slice(0, 100)}...
                 <Link to={`/${service.slug}`} className="text-blue-500 mt-2">
                   Read More
                 </Link>
-              </p>
+              </p> */}
               <div className="flex items-center mb-2">⭐⭐⭐⭐⭐</div>
               <Button
                 onClick={() => handleOrderClick(service.slug)}
